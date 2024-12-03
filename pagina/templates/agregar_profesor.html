@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- templates/agregar_profesor.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Agregar Nuevo Profesor</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="user-form">
+            <h3>Información de Usuario</h3>
+            {{ user_form.as_p }}
+        </div>
+        
+        <div class="profesor-form">
+            <h3>Información de Profesor</h3>
+            {{ profesor_form.as_p }}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+{% endblock %}
+
+<!-- templates/lista_profesores.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Lista de Profesores</h2>
+    
+    {% if user.is_superuser %}
+    <a href="{% url 'agregar_profesor' %}" class="btn btn-primary mb-3">Agregar Profesor</a>
+    {% endif %}
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Especialidad</th>
+                {% if user.is_superuser %}
+                <th>Acciones</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.rut }}</td>
+                <td>{{ profesor.nombre }}</td>
+                <td>{{ profesor.apellido }}</td>
+                <td>{{ profesor.email }}</td>
+                <td>{{ profesor.especialidad }}</td>
+                {% if user.is_superuser %}
+                <td>
+                    <a href="{% url 'editar_profesor' profesor.id %}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{% url 'eliminar_profesor' profesor.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+</body>
+</html>

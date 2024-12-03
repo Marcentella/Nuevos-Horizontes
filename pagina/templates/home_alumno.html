@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Alumno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:history.back()">
+                <img src="{% static 'logonh.png' %}"alt="logo" height="60px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/">Cerrar Sesión</a>
+                    </li>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Horario -->
+        <div class="mb-4">
+            <h2 class="text-center">Horario de Clases</h2>
+            <table class="table table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td>Matemática</td>
+                        <td>Lenguaje</td>
+                        <td>Historia</td>
+                        <td>Ciencias</td>
+                        <td>Inglés</td>
+                    </tr>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>Lenguaje</td>
+                        <td>Matemática</td>
+                        <td>Ciencias</td>
+                        <td>Historia</td>
+                        <td>Educación Física</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 10:15</td>
+                        <td colspan="5">Recreo</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:15</td>
+                        <td>Inglés</td>
+                        <td>Química</td>
+                        <td>Matemática</td>
+                        <td>Física</td>
+                        <td>Lenguaje</td>
+                    </tr>
+                    <tr>
+                        <td>11:15 - 12:15</td>
+                        <td>Historia</td>
+                        <td>Lenguaje</td>
+                        <td>Inglés</td>
+                        <td>Matemática</td>
+                        <td>Ciencias</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Notas -->
+        <div>
+            <h2 class="text-center">Notas</h2>
+            <table class="table table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matemática</td>
+                        <td>6.5</td>
+                        <td>5.8</td>
+                        <td>6.2</td>
+                        <td>6.2</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguaje</td>
+                        <td>5.5</td>
+                        <td>6.0</td>
+                        <td>5.8</td>
+                        <td>5.8</td>
+                    </tr>
+                    <tr>
+                        <td>Historia</td>
+                        <td>6.0</td>
+                        <td>5.8</td>
+                        <td>6.2</td>
+                        <td>6.0</td>
+                    </tr>
+                    <tr>
+                        <td>Inglés</td>
+                        <td>6.2</td>
+                        <td>6.8</td>
+                        <td>6.5</td>
+                        <td>6.5</td>
+                    </tr>
+                    <tr>
+                        <td>Ciencias</td>
+                        <td>5.8</td>
+                        <td>6.0</td>
+                        <td>6.2</td>
+                        <td>6.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 text-center">
+        <p>2014-2024 &copy; Nuevos Horizontes. Derechos de autor</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

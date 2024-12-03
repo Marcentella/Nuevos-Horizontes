@@ -1,0 +1,120 @@
+/* Estilo general del cuerpo */
+body {
+    background-color: #f1efe4; /* Fondo claro */
+    color: #333; /* Texto en color oscuro para buena legibilidad */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Fondo oscuro */
+    border-bottom: 2px solid #c78f57; /* Resaltado con color cálido */
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c78f57; /* Resaltar enlaces al pasar el cursor */
+}
+
+.navbar-toggler-icon {
+    background-color: #c78f57; /* Color cálido para el icono */
+}
+
+/* Títulos */
+h1, h2 {
+    color: #c78f57; /* Color cálido para los encabezados */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Tablas */
+.table {
+    background-color: #e4dfd2; /* Fondo suave */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    border-color: #c78f57; /* Líneas en color cálido */
+}
+
+.table th {
+    background-color: #343a40; /* Encabezados oscuros */
+    color: #fff; /* Texto claro */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f7f3; /* Alternar filas */
+}
+
+.table tbody tr:hover {
+    background-color: #dcd8c9; /* Resaltar al pasar el cursor */
+}
+
+/* Botones */
+button, .btn {
+    background-color: #c78f57;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #b17d45; /* Más oscuro al pasar el cursor */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #c78f57; /* Resaltado superior */
+}
+
+/* Horarios y notas */
+.container {
+    margin-bottom: 5rem; /* Evitar que el contenido toque el footer */
+}
+
+.table-bordered th, .table-bordered td {
+    border: 2px solid #c78f57; /* Bordes cálidos */
+}
+
+/* Tarjetas (opcional si se usan en otros homes) */
+.card {
+    border-radius: 16px !important;
+    background-color: #e4dfd2; /* Fondo cálido */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el cursor */
+}
+
+/* Recreo (estilo especial para el horario) */
+.table tbody tr td[colspan="5"] {
+    background-color: #f1efe4; /* Fondo suave */
+    font-weight: bold;
+    color: #c78f57;
+}

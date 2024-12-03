@@ -1,0 +1,46 @@
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.card-body{
+    background-color: #e4dfd2;
+    padding: 5em;
+    transition: 0.3s;
+    border-radius: 16px !important;
+}
+
+.card{
+    border-radius: 16px !important;
+    outline: none !important;
+}
+
+.card-body:hover{
+    transform: scale(1.1);
+}
+
+body{
+    background-color: #f1efe4;
+}
+
+.card-body button{
+    background-color: #c78f57;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 5px 20px;
+}
+
+.card-body button:hover {
+    background-color: #b17d45;
+    transition: 0.2s;
+}
+
+.card-credentials{
+    background-color: #e4dfd2;
+}

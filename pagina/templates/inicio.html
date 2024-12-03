@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos horizontes</title>
+    <link rel="stylesheet" href="{% static 'css/styleindex.css' %}">
+</head>
+<body>
+    <div id="cuerpo">
+        <div id="navbar">
+            <img src="{% static 'logonh.png' %}" alt="logo">
+            <div class="linksnavbar" id="linksnavbar">
+                <a href="">Admisión 2025</a>
+                <p>|</p>
+                <a href="/login">Intranet</a>
+                <p>|</p>
+                <a href="">Trabaja con nosotros</a>
+                <p>|</p>
+                <a href="">Contacto</a>
+            </div>
+        </div>
+        <!--cartel-->
+        <img src="{% static 'Cumplimos.png' %}" alt="cartel" id="cartel">
+        <!--cartel-->
+        <!--noticias-->
+        <div id="noticias">
+            <h1>Noticias destacadas</h1>
+            <div id="cards">
+                <div class="card">
+                    <img src="{% static 'not01.jpg' %}" alt="noticia1">
+                    <p>Reunión de apoderados Noviembre 2024</p>
+                    <button>Leer más</button>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'not2.jpg' %}" alt="noticia2">
+                    <p>Kinder y Pre-kinder - Día del alumno</p>
+                    <button>Leer más</button>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'not3.jpg' %}" alt="noticia3">
+                    <p>Nuestro equipo de natación preparandose para la próxima competencia</p>
+                    <button>Leer más</button>
+                </div>
+
+            </div>
+        </div>
+        <!--noticias-->
+        <!--footer-->
+        <footer>
+            <p>2014-2024 &copy;Nuevos Horizontes. Derechos de autor </p>
+        </footer>
+        <!--footer-->
+    </div>
+</body>
+</html>

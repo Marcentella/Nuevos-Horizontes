@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Crear Usuario</h1>
+    <form method="post" action="{% url 'crear_usuario' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear Usuario</button>
+    </form>
+    <a href="{% url 'home_admin' %}">Volver al inicio</a>
+</body>
+</html>
